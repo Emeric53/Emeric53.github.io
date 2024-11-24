@@ -8,7 +8,7 @@ repo_name: Emeric53/Emeric53.github.io # 仓库名称
 repo_url: https://github.com/Emeric53/Emeric53.github.io/ # 仓库地址
 
 # 版权信息
-copyright: Copyright &copy; 2024 ~ now | Emeric Liang
+copyright: Copyright &copy; 2024 ~ now | 🦩 Emeric Liang
 
 theme:
   name: material
@@ -28,11 +28,16 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
-      primary: teal
+      primary: light green
       accent: purple 
     - scheme: slate 
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode    
-      primary: teal
+      primary: blue grey
       accent: lime
+
+# # Plugins
+# plugins:
+#   - tags
+#   - blog

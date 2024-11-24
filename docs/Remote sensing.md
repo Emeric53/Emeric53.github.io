@@ -1,6 +1,2 @@
 # Remote sensing 
-
-## atmospheric remote sensing 
-
-### Hyperspectral imager
-Hyperspectral imager is the instrument has pretty high spectral resolution.
+This section is the part for remote sensing.

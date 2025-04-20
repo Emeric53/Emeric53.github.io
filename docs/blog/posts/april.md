@@ -4,5 +4,7 @@
 ## 吉他手-陈绮贞
 第一次完整地听完这张专辑，个人觉得还是很不错的，最喜欢的收录曲是其中的「1234567」。
 
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/152197399"></iframe>
+
 ## 结语
-还有多少会议，藏着多少秘密，在你心里我也许只是你欣赏的风景。
+还有多少回忆，藏着多少秘密，在你心里我也许只是你欣赏的风景。

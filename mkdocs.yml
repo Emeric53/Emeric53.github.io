@@ -13,12 +13,12 @@ copyright: Copyright &copy; 2024 ~ now | 🦩 Emeric Liang
 nav:
   - Home: index.md
   - Academic:
-  - Computer Science:
-    - Coding: "Computer Science/Coding.md"
-  - Math:
-    - Math Notes: "Math/Math.md"
-  - Share:
-    - Something: "Share/example.md"
+      - Computer Science:
+          - Coding: "Computer Science/Coding.md"
+      - Math:
+          - Math Notes: "Math/Math.md"
+  - Share:  # 假设 Share 你是公开展示的
+      - Something: "Share/example.md"
 
 theme:
   name: material

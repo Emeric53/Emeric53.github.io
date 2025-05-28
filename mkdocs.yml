@@ -10,16 +10,6 @@ repo_url: https://github.com/Emeric53/Emeric53.github.io/ # 仓库地址
 # 版权信息
 copyright: Copyright &copy; 2024 ~ now | 🦩 Emeric Liang
 
-nav:
-  - Home: index.md
-  - Academic:
-      - Computer Science:
-          - Coding: "Computer Science/Coding.md"
-      - Math:
-          - Math Notes: "Math/Math.md"
-  - Share:  # 假设 Share 你是公开展示的
-      - Something: "Share/example.md"
-
 theme:
   name: material
   features:
@@ -47,7 +37,8 @@ theme:
       primary: blue grey
       accent: lime
 
-# # Plugins
-# plugins:
-#   - tags
-#   - blog
+# Plugins
+plugins: 
+  - tags
+  - blog
+  - awesome-pages

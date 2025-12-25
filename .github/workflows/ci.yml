@@ -11,14 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: prefix-dev/setup-pixi@v0.8.1
         with:
-          python-version: 3.x
-      - uses: actions/cache@v3
-        with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install mkdocs-material
-      - run: pip install mkdocs-awesome-pages-plugin
-      - run: pip install pillow cairosvg
-      - run: mkdocs gh-deploy --force
+          pixi-version: v0.39.0
+          cache: true
+      - run: pixi run deploy

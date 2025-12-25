@@ -46,7 +46,7 @@ theme:
       primary: cyan
       accent: lime
   font:
-    text: Roboto
+    text: Google Sans
     code: JetBrains Mono
 
 # Social Links
@@ -70,13 +70,13 @@ plugins:
   - git-revision-date-localized:
       type: timeago
       locale: zh
-  - rss:
-      match_path: (technology|life|academic|monthly)/.*
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
+  # - rss:
+  #     match_path: (technology|life|academic|monthly)/.*
+  #     date_from_meta:
+  #       as_creation: date
+  #     categories:
+  #       - categories
+  #       - tags
   - minify:
       minify_html: true
 

@@ -179,7 +179,7 @@ pixi run python python文件.py
 pixi shell
 python python文件.py
 ```
-其中 `pixi shell`就是类似 `conda activate 环境名` 这样的操作，指定当前 shell 的 python 命令指向当前项目的 pixi python环境的编译器路径。
+其中 `pixi shell`就是类似 `conda activate 环境名` 这样的操作，指定当前 shell 的 python 命令指向当前项目的 pixi python环境的解释器路径。
 
 在 IDE 中的使用，其他平台我没有进行测试，VS Code 以及基于开源 VS Code 的一众编译器，都可以通过安装 pixi 的插件来实现 pixi 环境的自动识别，直接找到该项目文件夹中的 default 环境，之后只用点击 IDE 中的运行就能使用 pixi 创建和管理的 python 环境进行运行了。
 

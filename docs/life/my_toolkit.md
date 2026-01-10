@@ -1,0 +1,83 @@
+# 我的硬件软件工具箱
+
+所谓“工欲善其事，必先利其器”，我作为一个一直以来追求工作效率的人，对各种硬件和软件工具都有不少的爱好和追求。这篇帖子我就大致介绍一下我现在持有的各种电子设备和生活和学习中使用的各种软件应用。
+
+## 设备篇
+- Macbook Pro M1 Pro 丐版，我目前的唯一个人用笔记本。
+
+- iPhone 17 薰衣草紫 | 中国大陆版  
+    这部手机是我的主力机，却也是我现在每天使用时间最少的一部手机。首先摸着这部手机我就感觉不是很舒服，可能是被 iPhone Air 的出色手感养刁了吧，但是也无法否认这是一部很优秀的水桶机。满足我需求的重要的系统 iOS,漂亮的恰到好处的薰衣草紫色，足够我使用的电池续航，可以作为我 apple ecosystem 的中枢，也是我唯一装了电话卡的手机。我想把微信，支付宝和各种购物软件安装在这上面满足我的日常通讯，出行以及国内互联网服务需求就足够了。最近的一个我个人的大趋势是，使用手机的时间在越来越减少。
+
+- iPhone Air 淡金色 | 美国版  
+    这部手机绝对是我个人电子设备近期来而 NO.1 了。作为 2025 年 Apple 秋季发布会我唯一心动的手机，它顶级的做工，出色的手感，让我习惯和欣赏的外观，出色的减法造就的这么一台手机，确实让我爱不释手。我也特意想好了不要买国行版本，牺牲在国内使用中国 esim 的可能性，保留 iOS 系统的完整功能和无限制的国际 esim 添加。可惜的是 iOS 26 的改动导致我暂时无法在国内正常的使用 Apple News 这个软件了，本来觉得这个 6.5 寸的大屏用来看杂志和新闻是一个多美好的事情。这部手机对我的使用来说，没有我主观认为的巨大缺点，而它的优点好到足以让我忽略掉那些无伤大雅的小问题。
+
+- Google Pixel 9 Pro 陶瓷白 | 全球版  
+    我还是很喜欢谷歌像素手机的，Material 3 expressive 这一原先设计语言的更新版本，是让我很期待的手机系统发展的另一个方向了。用这部手机也是为了让我保留对 Android 系统最新情况的认知和了解。这部手机的系统真的很流畅，我在使用的时候感觉不到 Tensor 芯片在跑分层面上那样的不堪， 16 GB 的运行内存在当前 DRAM 涨价的浪潮下，没准还能领先大部分手机好几年。优秀的拍照系统，和 iOS 能互通的 hdr 照片显示，不错的系统使用体验和外观，都会让我隔段时间深入使用以下。目前唯一的遗憾就是缺少了 Pixel 10 Pro 系列的内置磁圈，对苹果的 magsafe 生态融入差了一点，未来考虑能否用实惠的价格换购 Pixel 11 代或者 12 代。
+
+- iPhone 13 mini 粉色 | 美国版
+    作为一个奇怪的苹果用户，标准的苹果系列 Pro 产品我肯定是会用的，但是也由于我对这家公司这么长时间的欣赏，他们出过的一些标新立异的电子设备，我也会尽可能尝试一下。这部手机的重量和握持手感其实和 iPhone Air 不相上下，只不过 A15 芯片加上当时的电池技术，以及差了一倍的运行内存，加上 iOS 26 的新图形界面对芯片性能的需求，实在难堪重任，所以就留着当个纪念吧。唯一的遗憾就是当初为什么在 iOS 18 激活服务器关闭前没有把系统刷回去。
+
+- iPad mini A17 Pro 星光色 | 香港版
+
+- Airpods Pro 2 Lightning version
+
+- Sonos Ace (black)
+
+- Switch oled 喷 3 限定
+
+- Samsung T7 Shield 2 TB 白色，我的主要个人用移动硬盘。  
+    当初的购买决策是想着苹果刚刚发布了高规格视频的外接硬盘拍摄支持，作为 iPhone 15 Pro 的配件买入的，也算是在一个合适的时间点买入，过了没几个月硬盘的价格就开始上涨了，记得后面 lgk 需要一块大容量 SSD 的时候购入价格就比我多花了不少。但是并没有真的用来进行视频拍摄素材用，而是转换为了一个个人学习和娱乐数据存储用盘。我将这块硬盘的文件系统转换成了 APFS (Apple File System),也就是苹果设备都在用的文件系统，因为我的主要个人电子设备都是苹果的，这样做设备兼容性最好，也不会有文件的丢失和盘崩溃现象产生(希望一直不会)。但是也就导致这块盘目前只能局限在这些设备上使用。不过最近，我在 Linux 系统上安装了 linux-apfs-rw 这个内核的 tweak，也能实现这块盘的挂载和文件的读写了。
+
+## 软件篇
+
+
+### My app defaults
+
+📨 邮件客户端：Mailmate, Apple Mail.app
+
+📝 笔记应用：Obsidian + remotely save, Apple Notes.app
+
+✅ 待办事项：Apple Reminders.app (提醒事项)
+
+📷 摄影设备：Project Indigo with iPhone, Google Pixel 9 Pro
+
+📆 日历服务：Apple Calendar, Google Calendar
+
+📁 云端存储：iCloud, Google Drive, OneDrive
+
+📖 RSS 阅读器：Folo
+
+🙍🏻‍♂️ 通讯录：Apple Contacts
+
+🌐 浏览器：Chrome
+
+💬 即时通讯：Telegram, WeChat (微信)
+
+📜 文字处理：Markdown, LaTeX, MS Word
+
+📊 演示文稿：MS PowerPoint, Apple Keynote.app, Figma
+
+🛒 购物清单：Apple Reminders.app
+
+💰 记账理财：Poketto
+
+📰 新闻资讯：Apple News.app, Particle, Twitter
+
+🎵 音乐服务：Apple Music.app, Spotify
+
+🎤 播客应用：Apple Podcasts.app
+
+🔐 密码管理：Apple Passwords.app
+
+🧑‍💻 代码编辑器：Google Antigravity, VS Code
+
+✈️ 网络工具：Surge, FlClash
+
+🪄 启动器：Alfred
+
+😘 博客平台：Github Pages
+
+⌨️ 输入方案：小鹤双拼
+
+
+

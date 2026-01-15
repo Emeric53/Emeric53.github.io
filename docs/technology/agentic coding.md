@@ -39,6 +39,13 @@ workflows 我也没用出来什么特别的，在我看来这个功能和 shell 
 skills 则是最近 Antigravity 新增加的功能，毕竟 Claude Code skills 热度很高，不抄说不过去。skills 其实就是一系列任务的封装，用来完成某个稍微复杂且具备多样性的一件事情。举例来说，可以是一个代码测试 skill，或者绘图 skill。skill 的总体配置包括一个skill 内容的说明 markdown 格式文档，也可以附带一些代码文件和模板文件等。网上现在有很多很多已有 skills 的仓库，可以看看实现的功能是否需要来直接使用，也可以借鉴别人的写法和组织形式，慢慢构建特化自己需求的 skills，我想随着慢慢的积累和优化，这项拓展功能是能优化人的工作流，提高工作效率的。
 
 ## 推荐阅读
-这里只放两个我认为有价值的阅读内容，分别是来自 Cursor 和 Google Antigravity 的官方文档。
-https://cursor.com/blog/agent-best-practices
-https://antigravity.google/docs/agent
+
+这里只放两个我认为最有价值的官方资源：
+
+> 🔗 **Cursor Blog: Agent Best Practices**
+> [https://cursor.com/blog/agent-best-practices](https://cursor.com/blog/agent-best-practices)
+> *推荐理由：Cursor 官方对于 Agent 开发落地的最佳实践总结。*
+
+> 🔗 **Google Antigravity Documentation**
+> [https://antigravity.google/docs/agent](https://antigravity.google/docs/agent)
+> *推荐理由：来自 Google 的权威文档，系统性强。*

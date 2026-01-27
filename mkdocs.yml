@@ -70,6 +70,7 @@ plugins:
   - git-revision-date-localized:
       type: timeago
       locale: zh
+      enable_creation_date: true
   # - rss:
   #     match_path: (technology|life|academic|monthly)/.*
   #     date_from_meta:

@@ -14,7 +14,7 @@ theme:
   name: material
   language: zh
   icon:
-    logo: material/robot-happy-outline
+    logo: material/robot
     repo: fontawesome/brands/github
   features:
     - navigation.indexes
@@ -46,8 +46,12 @@ theme:
       primary: cyan
       accent: lime
   font:
-    text: Google Sans
-    code: JetBrains Mono
+    text: Google Sans, Noto Sans CJK SC
+    code: Ioskeley Mono
+
+# Extra CSS
+extra_css:
+  - stylesheets/extra.css
 
 # Social Links
 extra:

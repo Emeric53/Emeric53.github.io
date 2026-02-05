@@ -87,7 +87,8 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://github.com/vinta/pangu.js
+  - https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js
+  - javascripts/pangu_init.js
 
 extra_css:
   - stylesheets/extra.css

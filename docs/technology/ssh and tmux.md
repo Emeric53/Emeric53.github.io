@@ -27,7 +27,7 @@ SSH 的使用方式在经过逐步的优化后，就挺简单了，默认的 ssh
 ## tmux
 tmux 全程是 terminal multiplexer，也就是终端复用器。这个工具的主要作用我觉得就是会话的持久化和管理。从层级来说，tmux 可以分为 session,window和panel 三个层级，其中 session 是最高级，了解这个的用法其实也就掌握了一大半了。
 
-使用 `tmux new -s session_name` 命令就可以创建一个新的 session，其中 `session_name` 是 session 的名称，可以自定义。例如，如果当前我想开展一个代码编辑的工作，就可以使用 `tmux new -s code` 命令创建一个新的 session。这个会话看上去和原先的终端没什么两样，但是我可以通过 `ctrl+b` 和 `d` 两个按键的组合，将这个 session 从当前终端中分离出去，然后就可以进行其他的工作了。之后如果想重新连接到这个 session，只需要使用 `tmux attach -t session_name` 命令就可以重新连接到这个 session 了。如果忘记了当前有哪些 session，可以使用 `tmux ls` 命令查看当前所有的 session。每个会话都是相互独立的，并且在其中运行的命令和过去的状态也完全保留着。
+使用 `tmux new -s session_name` 命令就可以创建一个新的 session，其中 `session_name` 是 session 的名称，可以自定义。例如，如果当前我想开展一个代码编辑的工作，就可以使用 `tmux new -s code` 命令创建一个新的 session。这个会话看上去和原先的终端没什么两样，但是我可以通过 `ctrl+b` 和 `d` 两个按键的组合，将这个 session 从当前终端中分离出去，然后就可以进行其他的工作了。之后如果想重新连接到这个 session，只需要使用 `tmux attach -t session_name` 命令就可以重新连接到这个 session 了。如果忘记了当前有哪些 session，可以使用 `tmux ls` 命令查看当前所有的 session。每个会话都是相互独立的，并且在其中运行的命令和过去的状态也完全保留着。当你觉得某一个对话完全没有用的时候呢，还可以使用 `tmux kill-session -t session_name` 命令来删除这个 session。
 
 之后我想简单说明一下 window 和 panel 的用法。window 类似于同一个屏幕上的不同窗口，主要通过  `ctrl b` + `c` 来创建新的一个窗口，然后使用 `ctrl b` + `n` 切换到下一个窗口，`ctrl b` 和 `p` 切换到上一个窗口。这些窗口同属于当前的会话，
 

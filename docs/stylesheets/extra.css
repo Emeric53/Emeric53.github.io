@@ -1,0 +1,11 @@
+:root {
+    /* 定义字体栈：Inter 优先，接着是思源黑体(Web版)，最后是系统自带黑体 */
+    --md-text-font: "Google Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+
+    /* 代码字体：JetBrains Mono 优先，中文使用更纱黑体或思源等宽 */
+    --md-code-font: "JetBrains Mono", "Sarasa Term SC", "Noto Sans Mono CJK SC", "Microsoft YaHei", monospace;
+}
+
+/* 针对 Google Fonts 导入 Noto Sans SC (可选，为了保证全平台一致性) */
+/* 如果不想拖慢加载速度，可以不引 Noto Sans SC，直接用系统字体回退 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');

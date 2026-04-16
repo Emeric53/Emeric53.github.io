@@ -6,6 +6,11 @@
     --md-code-font: "JetBrains Mono", "Sarasa Term SC", "Noto Sans Mono CJK SC", "Microsoft YaHei", monospace;
 }
 
+/* 现代浏览器原生支持中英文间距，防止脚本导致的跳动 */
+html {
+    text-autospace: occidental;
+}
+
 /* 针对 Google Fonts 导入 Noto Sans SC (可选，为了保证全平台一致性) */
 /* 如果不想拖慢加载速度，可以不引 Noto Sans SC，直接用系统字体回退 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');

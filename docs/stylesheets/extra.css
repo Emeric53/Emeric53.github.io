@@ -4,6 +4,202 @@
 
     /* 代码字体：JetBrains Mono 优先，中文使用更纱黑体或思源等宽 */
     --md-code-font: "JetBrains Mono", "Sarasa Term SC", "Noto Sans Mono CJK SC", "Microsoft YaHei", monospace;
+
+    --garden-ink: #253238;
+    --garden-muted: #60727a;
+    --garden-line: rgba(37, 50, 56, 0.12);
+    --garden-wash: #f6f3ec;
+    --garden-leaf: #2f7d70;
+    --garden-rust: #a45f3d;
+    --garden-sky: #4d7ea8;
+}
+
+[data-md-color-scheme="slate"] {
+    --garden-ink: #e8edf0;
+    --garden-muted: #a9b8c0;
+    --garden-line: rgba(232, 237, 240, 0.14);
+    --garden-wash: #182124;
+    --garden-leaf: #62b6a8;
+    --garden-rust: #d08a67;
+    --garden-sky: #7fb1d6;
+}
+
+body {
+    color: var(--garden-ink);
+}
+
+.md-main__inner {
+    margin-top: 1.1rem;
+}
+
+.md-content__inner {
+    padding-bottom: 3rem;
+}
+
+.md-typeset {
+    font-size: 0.82rem;
+    line-height: 1.82;
+}
+
+.md-typeset h1 {
+    margin-bottom: 0.75rem;
+    color: var(--garden-ink);
+    font-weight: 720;
+}
+
+.md-typeset h2 {
+    margin-top: 2.2rem;
+    color: var(--garden-ink);
+    font-weight: 680;
+}
+
+.md-typeset a {
+    color: var(--garden-leaf);
+}
+
+.md-typeset blockquote {
+    border-left-color: var(--garden-rust);
+    color: var(--garden-muted);
+}
+
+.md-typeset .garden-title {
+    margin-top: 0.35rem;
+    font-size: clamp(1.9rem, 1.45rem + 1.2vw, 2.7rem);
+    line-height: 1.18;
+}
+
+.garden-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 0.9fr);
+    gap: 1rem;
+    align-items: end;
+    margin: 1.6rem 0 2rem;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--garden-line);
+    border-radius: 8px;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(77, 126, 168, 0.14), transparent 26%),
+        linear-gradient(135deg, rgba(47, 125, 112, 0.08), transparent 45%),
+        var(--garden-wash);
+}
+
+.garden-kicker {
+    margin: 0 0 0.35rem;
+    color: var(--garden-muted);
+    font-size: 0.72rem;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.garden-quote {
+    margin: 0;
+    color: var(--garden-ink);
+    font-size: 1.15rem;
+    font-weight: 650;
+}
+
+.garden-status {
+    display: grid;
+    gap: 0.18rem;
+    padding-left: 1rem;
+    border-left: 1px solid var(--garden-line);
+}
+
+.garden-status span {
+    color: var(--garden-muted);
+    font-size: 0.68rem;
+}
+
+.garden-status strong {
+    color: var(--garden-ink);
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+.garden-rhythm {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin: -0.7rem 0 2rem;
+}
+
+.garden-rhythm ul {
+    display: contents;
+}
+
+.garden-rhythm li {
+    margin: 0;
+    padding: 0.8rem 0;
+    border-top: 1px solid var(--garden-line);
+    list-style: none;
+}
+
+.garden-rhythm strong {
+    display: block;
+    color: var(--garden-rust);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+}
+
+.md-typeset .garden-grid.cards {
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+}
+
+.md-typeset .garden-grid.cards > ul > li,
+.md-typeset .garden-grid.cards > ol > li,
+.md-typeset .garden-grid > .card {
+    border-color: var(--garden-line);
+    border-radius: 8px;
+    transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.md-typeset .garden-grid.cards > ul > li:hover,
+.md-typeset .garden-grid.cards > ol > li:hover,
+.md-typeset .garden-grid > .card:hover {
+    border-color: color-mix(in srgb, var(--garden-leaf) 45%, var(--garden-line));
+    transform: translateY(-1px);
+}
+
+.md-typeset .garden-grid .lg {
+    color: var(--garden-sky);
+}
+
+.garden-list ul {
+    display: grid;
+    gap: 0.55rem;
+    padding-left: 0;
+}
+
+.garden-list li {
+    margin: 0;
+    padding: 0.75rem 0 0.75rem 1rem;
+    border-left: 2px solid var(--garden-line);
+    list-style: none;
+}
+
+.garden-list li:hover {
+    border-left-color: var(--garden-leaf);
+}
+
+@media screen and (max-width: 44.9375em) {
+    .garden-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .garden-status {
+        padding-left: 0;
+        padding-top: 0.85rem;
+        border-top: 1px solid var(--garden-line);
+        border-left: 0;
+    }
+
+    .md-typeset .garden-grid.cards {
+        grid-template-columns: 1fr;
+    }
+
+    .garden-rhythm {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* 现代浏览器原生支持中英文间距，防止脚本导致的跳动 */

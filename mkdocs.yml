@@ -74,6 +74,7 @@ plugins:
       type: timeago
       locale: zh
       enable_creation_date: true
+      enable_git_follow: false
       fallback_to_build_date: false
   # - rss:
   #     match_path: (technology|life|academic|monthly)/.*

@@ -1,3 +1,7 @@
-# Share
+# 分享收藏
 
-Welcome to the Share section.
+这里放一些更轻量的公开收藏：读过的内容、听过的音乐、常用网络资源，以及未来可能反复回看的东西。
+
+## 目录
+
+<!-- awesome-pages: section-index -->

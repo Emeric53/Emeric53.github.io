@@ -1,6 +1,7 @@
 nav:
   - 首页: index.md
+  - 关于: about
+  - 项目: projects
   - 学术: academic
   - 技术: technology
-  - 杂谈: life
-  - 月记: monthly
+  - 分享: Share

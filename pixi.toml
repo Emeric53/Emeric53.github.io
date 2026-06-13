@@ -12,7 +12,8 @@ cairo = ">=1.18.4,<2"
 
 [tasks]
 deploy = "mkdocs gh-deploy --force"
-start = "mkdocs serve"
+# PYTHONDONTWRITEBYTECODE：避免 hook 生成 .pyc 触发 mkdocs serve 的重载循环
+start = { cmd = "mkdocs serve", env = { PYTHONDONTWRITEBYTECODE = "1" } }
 build = "mkdocs build"
 
 [pypi-dependencies]

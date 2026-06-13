@@ -1,35 +1,110 @@
-:root {
-    /* 定义字体栈：Inter 优先，接着是思源黑体(Web版)，最后是系统自带黑体 */
-    --md-text-font: "Google Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+/* ==========================================================================
+   Emeric53 — 自定义样式（基于 MkDocs Material，克制风格）
+   保留暖色调色板与字体栈，去掉过度动效，强调干净留白与清晰层级。
+   ========================================================================== */
 
-    /* 代码字体：JetBrains Mono 优先，中文使用更纱黑体或思源等宽 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+:root {
+    --md-text-font: "Google Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
     --md-code-font: "JetBrains Mono", "Sarasa Term SC", "Noto Sans Mono CJK SC", "Microsoft YaHei", monospace;
 
-    --garden-ink: #253238;
-    --garden-muted: #60727a;
-    --garden-line: rgba(37, 50, 56, 0.12);
-    --garden-wash: #f6f3ec;
-    --garden-leaf: #2f7d70;
-    --garden-rust: #a45f3d;
-    --garden-sky: #4d7ea8;
+    /* 暖色调色板 */
+    --garden-ink: #253238;          /* 主文字 */
+    --garden-muted: #60727a;        /* 次要文字 */
+    --garden-line: rgba(37, 50, 56, 0.10);
+    --garden-wash: #f6f3ec;         /* 暖沙底色 */
+    --garden-surface: #ffffff;      /* 卡片/容器底 */
+    --garden-leaf: #2f7d70;         /* 主色 */
+    --garden-rust: #a45f3d;         /* 强调色 */
+    --garden-sky: #4d7ea8;          /* 辅助色 */
+
+    /* Material 系统变量覆盖 */
+    --md-primary-fg-color: var(--garden-leaf);
+    --md-primary-fg-color--dark: #1e5249;
+    --md-primary-fg-color--light: #4c9a8d;
+    --md-primary-bg-color: #ffffff;
+    --md-primary-bg-color--active: var(--garden-leaf);
+
+    --md-accent-fg-color: var(--garden-rust);
+    --md-accent-fg-color--transparent: rgba(164, 95, 61, 0.1);
+    --md-accent-bg-color: #ffffff;
+
+    --md-default-bg-color: var(--garden-wash);
+    --md-default-fg-color: var(--garden-ink);
+    --md-default-fg-color--light: var(--garden-muted);
+    --md-default-fg-color--lighter: rgba(37, 50, 56, 0.3);
+    --md-default-fg-color--lightest: rgba(37, 50, 56, 0.08);
+
+    --md-typeset-color: var(--garden-ink);
+    --md-typeset-a-color: var(--garden-leaf);
+
+    --md-code-bg-color: rgba(37, 50, 56, 0.04);
+    --md-code-fg-color: var(--garden-ink);
+
+    --md-footer-bg-color: var(--garden-ink);
+    --md-footer-bg-color--dark: #182124;
+
+    --md-selection-bg: rgba(164, 95, 61, 0.15);
+    --md-selection-fg: var(--garden-ink);
 }
 
+/* 暗色模式 */
 [data-md-color-scheme="slate"] {
     --garden-ink: #e8edf0;
     --garden-muted: #a9b8c0;
-    --garden-line: rgba(232, 237, 240, 0.14);
-    --garden-wash: #182124;
+    --garden-line: rgba(232, 237, 240, 0.10);
+    --garden-wash: #12181b;
+    --garden-surface: #1a2226;
     --garden-leaf: #62b6a8;
     --garden-rust: #d08a67;
     --garden-sky: #7fb1d6;
+
+    --md-primary-fg-color: var(--garden-wash);
+    --md-primary-fg-color--dark: #090c0e;
+    --md-primary-fg-color--light: #2c3a40;
+    --md-primary-bg-color: var(--garden-ink);
+    --md-primary-bg-color--active: var(--garden-leaf);
+
+    --md-accent-fg-color: var(--garden-rust);
+    --md-accent-fg-color--transparent: rgba(208, 138, 103, 0.15);
+    --md-accent-bg-color: var(--garden-wash);
+
+    --md-default-bg-color: var(--garden-wash);
+    --md-default-fg-color: var(--garden-ink);
+    --md-default-fg-color--light: var(--garden-muted);
+    --md-default-fg-color--lighter: rgba(232, 237, 240, 0.3);
+    --md-default-fg-color--lightest: rgba(232, 237, 240, 0.1);
+
+    --md-typeset-color: var(--garden-ink);
+    --md-typeset-a-color: var(--garden-leaf);
+
+    --md-code-bg-color: rgba(232, 237, 240, 0.05);
+    --md-code-fg-color: var(--garden-ink);
+
+    --md-footer-bg-color: #0b0f11;
+    --md-footer-bg-color--dark: #050708;
+
+    --md-selection-bg: rgba(208, 138, 103, 0.25);
+    --md-selection-fg: var(--garden-ink);
 }
 
-body {
-    color: var(--garden-ink);
+/* ==========================================================================
+   全局排版
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+    text-autospace: occidental;
+}
+
+::selection {
+    background-color: var(--md-selection-bg);
+    color: var(--md-selection-fg);
 }
 
 .md-main__inner {
-    margin-top: 1.1rem;
+    margin-top: 1.5rem;
 }
 
 .md-content__inner {
@@ -37,176 +112,207 @@ body {
 }
 
 .md-typeset {
-    font-size: 0.82rem;
-    line-height: 1.82;
+    font-size: 0.85rem;
+    line-height: 1.8;
 }
 
 .md-typeset h1 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.8rem;
     color: var(--garden-ink);
-    font-weight: 720;
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 .md-typeset h2 {
     margin-top: 2.2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--garden-line);
     color: var(--garden-ink);
-    font-weight: 680;
-}
-
-.md-typeset a {
-    color: var(--garden-leaf);
-}
-
-.md-typeset blockquote {
-    border-left-color: var(--garden-rust);
-    color: var(--garden-muted);
-}
-
-.md-typeset .garden-title {
-    margin-top: 0.35rem;
-    font-size: clamp(1.9rem, 1.45rem + 1.2vw, 2.7rem);
-    line-height: 1.18;
-}
-
-.garden-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 0.9fr);
-    gap: 1rem;
-    align-items: end;
-    margin: 1.6rem 0 2rem;
-    padding: 1.15rem 1.25rem;
-    border: 1px solid var(--garden-line);
-    border-radius: 8px;
-    background:
-        radial-gradient(circle at 10% 0%, rgba(77, 126, 168, 0.14), transparent 26%),
-        linear-gradient(135deg, rgba(47, 125, 112, 0.08), transparent 45%),
-        var(--garden-wash);
-}
-
-.garden-kicker {
-    margin: 0 0 0.35rem;
-    color: var(--garden-muted);
-    font-size: 0.72rem;
-    letter-spacing: 0;
-    text-transform: uppercase;
-}
-
-.garden-quote {
-    margin: 0;
-    color: var(--garden-ink);
-    font-size: 1.15rem;
     font-weight: 650;
 }
 
-.garden-status {
-    display: grid;
-    gap: 0.18rem;
-    padding-left: 1rem;
-    border-left: 1px solid var(--garden-line);
+.md-typeset h3 {
+    font-weight: 600;
 }
 
-.garden-status span {
-    color: var(--garden-muted);
-    font-size: 0.68rem;
-}
-
-.garden-status strong {
-    color: var(--garden-ink);
-    font-size: 0.82rem;
-    line-height: 1.55;
-}
-
-.garden-rhythm {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.65rem;
-    margin: -0.7rem 0 2rem;
-}
-
-.garden-rhythm ul {
-    display: contents;
-}
-
-.garden-rhythm li {
-    margin: 0;
-    padding: 0.8rem 0;
-    border-top: 1px solid var(--garden-line);
-    list-style: none;
-}
-
-.garden-rhythm strong {
-    display: block;
+.md-typeset a:hover {
     color: var(--garden-rust);
-    font-size: 0.68rem;
-    text-transform: uppercase;
 }
 
-.md-typeset .garden-grid.cards {
-    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+.md-typeset blockquote {
+    border-left: 3px solid var(--garden-rust);
+    color: var(--garden-muted);
+    background-color: color-mix(in srgb, var(--garden-rust) 4%, transparent);
+    padding: 0.4rem 1rem;
+    border-radius: 0 6px 6px 0;
 }
 
-.md-typeset .garden-grid.cards > ul > li,
-.md-typeset .garden-grid.cards > ol > li,
-.md-typeset .garden-grid > .card {
-    border-color: var(--garden-line);
-    border-radius: 8px;
-    transition: border-color 160ms ease, transform 160ms ease;
+/* ==========================================================================
+   顶栏 / 标签栏：轻半透明 + 细分割线（去重磨砂）
+   ========================================================================== */
+
+.md-header {
+    background-color: var(--md-primary-fg-color);
+    border-bottom: 1px solid var(--garden-line);
+    box-shadow: none;
 }
 
-.md-typeset .garden-grid.cards > ul > li:hover,
-.md-typeset .garden-grid.cards > ol > li:hover,
-.md-typeset .garden-grid > .card:hover {
-    border-color: color-mix(in srgb, var(--garden-leaf) 45%, var(--garden-line));
-    transform: translateY(-1px);
+.md-tabs {
+    background-color: var(--md-primary-fg-color);
+    border-bottom: 1px solid var(--garden-line);
 }
 
-.md-typeset .garden-grid .lg {
-    color: var(--garden-sky);
+.md-tabs__link {
+    opacity: 0.8;
+    font-weight: 500;
+    transition: opacity 150ms;
 }
 
-.garden-list ul {
-    display: grid;
-    gap: 0.55rem;
-    padding-left: 0;
+.md-tabs__link--active,
+.md-tabs__link:hover {
+    opacity: 1;
 }
 
-.garden-list li {
-    margin: 0;
-    padding: 0.75rem 0 0.75rem 1rem;
-    border-left: 2px solid var(--garden-line);
+/* ==========================================================================
+   阅读信息横条（hooks/reading_time.py 注入）
+   ========================================================================== */
+
+.reading-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.1rem;
+    margin: 0.2rem 0 1.6rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--garden-line);
+    color: var(--garden-muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.01em;
+}
+
+.reading-meta__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* ==========================================================================
+   导航卡片（grid cards）：克制悬停
+   ========================================================================== */
+
+.md-typeset .grid.cards {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 0.8rem;
+}
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+    border: 1px solid var(--garden-line);
+    border-radius: 10px;
+    background: var(--garden-surface);
+    padding: 1.1rem 1.2rem;
+    box-shadow: none;
+    transition: border-color 180ms ease, transform 180ms ease;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li,
+[data-md-color-scheme="slate"] .md-typeset .grid > .card {
+    background: var(--garden-surface);
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid > .card:hover {
+    border-color: var(--garden-leaf);
+    transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards li .lg {
+    color: var(--garden-leaf);
+}
+
+.md-typeset .grid.cards hr {
+    margin: 0.7rem 0;
+    border-top: 1px solid var(--garden-line);
+}
+
+/* ==========================================================================
+   “最近写的”列表
+   ========================================================================== */
+
+.recent-list ul {
     list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 0.4rem;
 }
 
-.garden-list li:hover {
-    border-left-color: var(--garden-leaf);
+.recent-list li {
+    margin: 0;
+    padding: 0.7rem 0.9rem;
+    border-left: 2px solid var(--garden-line);
+    border-radius: 0 6px 6px 0;
+    transition: border-left-color 180ms ease, background-color 180ms ease;
 }
+
+.recent-list li:hover {
+    border-left-color: var(--garden-leaf);
+    background-color: color-mix(in srgb, var(--garden-leaf) 4%, transparent);
+}
+
+/* ==========================================================================
+   代码块 / 提示块 / 滚动条
+   ========================================================================== */
+
+.md-typeset pre {
+    border-radius: 8px;
+    border: 1px solid var(--garden-line);
+}
+
+.md-typeset code {
+    border-radius: 4px;
+}
+
+.md-typeset .admonition {
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--garden-muted) 35%, transparent);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--garden-leaf);
+}
+
+/* ==========================================================================
+   giscus 评论区
+   ========================================================================== */
+
+#__comments {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--garden-line);
+}
+
+.giscus {
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
+   响应式
+   ========================================================================== */
 
 @media screen and (max-width: 44.9375em) {
-    .garden-hero {
-        grid-template-columns: 1fr;
-    }
-
-    .garden-status {
-        padding-left: 0;
-        padding-top: 0.85rem;
-        border-top: 1px solid var(--garden-line);
-        border-left: 0;
-    }
-
-    .md-typeset .garden-grid.cards {
-        grid-template-columns: 1fr;
-    }
-
-    .garden-rhythm {
+    .md-typeset .grid.cards {
         grid-template-columns: 1fr;
     }
 }
-
-/* 现代浏览器原生支持中英文间距，防止脚本导致的跳动 */
-html {
-    text-autospace: occidental;
-}
-
-/* 针对 Google Fonts 导入 Noto Sans SC (可选，为了保证全平台一致性) */
-/* 如果不想拖慢加载速度，可以不引 Noto Sans SC，直接用系统字体回退 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');

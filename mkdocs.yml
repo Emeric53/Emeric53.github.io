@@ -1,26 +1,27 @@
 # 项目信息
-site_name: Emeric53
-site_author: Emeric53
-site_description: Welcome to Emeric53's nullspace.
+site_name: 梁梦磊
+site_author: Menglei Liang
+site_description: Menglei Liang's nullspace.
+site_url: https://emeric53.github.io/
 
 # 代码仓库信息
 repo_name: Emeric53/Emeric53.github.io
 repo_url: https://github.com/Emeric53/Emeric53.github.io/
 
 # 版权信息
-copyright: Copyright &copy; 2024 ~ now | 🦩 Emeric Liang
+copyright: Copyright &copy; 2024 ~ now | 🦩 Menglei Liang
 
 theme:
   name: material
   language: zh
+  custom_dir: overrides
   icon:
-    logo: material/robot-happy-outline
+    logo: material/telescope
     repo: fontawesome/brands/github
   features:
     - navigation.indexes
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
     - toc.follow
     - navigation.top
     - search.suggest
@@ -59,34 +60,65 @@ extra:
       link: https://github.com/Emeric53
     - icon: fontawesome/solid/envelope
       link: mailto:todayislml@gmail.com
+  # giscus 评论 + 点赞（基于 GitHub Discussions）
+  # 配置步骤：1) 仓库 Settings 开启 Discussions；2) 安装 https://github.com/apps/giscus
+  # 3) 打开 https://giscus.app 选 pathname 映射，复制 repo_id 与 category_id 填到下方。
+  # 四个值任一为空时，文章页不会渲染评论区。
+  giscus:
+    repo: "Emeric53/Emeric53.github.io"
+    repo_id: "R_kgDONTudTA"
+    category: "Comments"
+    category_id: "DIC_kwDONTudTM4C_D6i"
 
 # Plugins
 plugins: 
   - search:
-      lang: 
+      lang:
         - en
         - zh
-  - tags
   - awesome-pages
-
+  # 月记：按时间排列的博客实例（blog 必须排在 awesome-pages 之后）
+  - blog:
+      blog_dir: monthly
+      post_url_format: "{slug}"
+      post_readtime: false      # 阅读时长全站统一用 hooks/reading_time.py，关掉自带的避免割裂
+      authors: false
+      categories: false
+      pagination_per_page: 10
+  # 生活杂谈：第二个博客实例
+  - blog:
+      blog_dir: life
+      post_url_format: "{slug}"
+      post_readtime: false
+      authors: false
+      categories: false
+      pagination_per_page: 10
+  - tags
+  - social:
+      cards_layout_options:
+        font_family: Noto Sans SC
   - glightbox
   - git-revision-date-localized:
       type: timeago
       locale: zh
       enable_creation_date: true
       enable_git_follow: false
-      fallback_to_build_date: false
-  # - rss:
-  #     match_path: (technology|life|academic|monthly)/.*
-  #     date_from_meta:
-  #       as_creation: date
-  #     categories:
-  #       - categories
-  #       - tags
+      fallback_to_build_date: true
+  - rss:
+      match_path: (monthly|life|academic)/.*|technology/[^/]+\.md
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
   - minify:
       minify_html: true
 
-# Extra Configuration 
+# Hooks
+hooks:
+  - hooks/reading_time.py
+
+# Extra Configuration
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

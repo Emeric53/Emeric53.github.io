@@ -1,4 +1,9 @@
 
 /site
 /.pixi
+/.cache
 .DS_Store
+
+/__pycache__
+hooks/__pycache__
+*.pyc

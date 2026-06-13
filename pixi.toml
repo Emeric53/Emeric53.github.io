@@ -8,6 +8,7 @@ platforms = ["linux-64", "osx-arm64", "win-64"]
 
 [dependencies]
 python = "3.10.*"
+cairo = ">=1.18.4,<2"
 
 [tasks]
 deploy = "mkdocs gh-deploy --force"

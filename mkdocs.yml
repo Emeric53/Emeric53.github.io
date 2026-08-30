@@ -1,7 +1,7 @@
 # 项目信息
-site_name: 梁梦磊
+site_name: Menglei Liang
 site_author: Menglei Liang
-site_description: Menglei Liang's nullspace.
+site_description: Menglei Liang — PhD student working on methane remote sensing, scientific machine learning, and greenhouse-gas monitoring.
 site_url: https://emeric53.github.io/
 
 # 代码仓库信息
@@ -15,8 +15,9 @@ theme:
   name: material
   language: zh
   custom_dir: overrides
+  favicon: assets/images/favicon.svg
   icon:
-    logo: material/telescope
+    logo: material/satellite-variant
     repo: fontawesome/brands/github
   features:
     - navigation.indexes
@@ -39,19 +40,13 @@ theme:
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
-        name: Switch to dark mode
-      primary: teal
-      accent: purple 
-    - scheme: slate 
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
       toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode    
-      primary: cyan
-      accent: lime
-  font:
-    text: Google Sans
-    code: JetBrains Mono
+        icon: material/weather-sunny
+        name: Light mode
+  font: false
 
 # Social Links
 extra:
@@ -59,16 +54,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Emeric53
     - icon: fontawesome/solid/envelope
-      link: mailto:todayislml@gmail.com
-  # giscus 评论 + 点赞（基于 GitHub Discussions）
-  # 配置步骤：1) 仓库 Settings 开启 Discussions；2) 安装 https://github.com/apps/giscus
-  # 3) 打开 https://giscus.app 选 pathname 映射，复制 repo_id 与 category_id 填到下方。
-  # 四个值任一为空时，文章页不会渲染评论区。
-  giscus:
-    repo: "Emeric53/Emeric53.github.io"
-    repo_id: "R_kgDONTudTA"
-    category: "Comments"
-    category_id: "DIC_kwDONTudTM4C_D6i"
+      link: mailto:mliang3@albany.edu
 
 # Plugins
 plugins: 
@@ -77,26 +63,6 @@ plugins:
         - en
         - zh
   - awesome-pages
-  # 月记：按时间排列的博客实例（blog 必须排在 awesome-pages 之后）
-  - blog:
-      blog_dir: monthly
-      post_url_format: "{slug}"
-      post_readtime: false      # 阅读时长全站统一用 hooks/reading_time.py，关掉自带的避免割裂
-      authors: false
-      categories: false
-      pagination_per_page: 10
-  # 生活杂谈：第二个博客实例
-  - blog:
-      blog_dir: life
-      post_url_format: "{slug}"
-      post_readtime: false
-      authors: false
-      categories: false
-      pagination_per_page: 10
-  - tags
-  - social:
-      cards_layout_options:
-        font_family: Noto Sans SC
   - glightbox
   - git-revision-date-localized:
       type: timeago
@@ -104,19 +70,8 @@ plugins:
       enable_creation_date: true
       enable_git_follow: false
       fallback_to_build_date: true
-  - rss:
-      match_path: (monthly|life|academic)/.*|technology/[^/]+\.md
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
   - minify:
       minify_html: true
-
-# Hooks
-hooks:
-  - hooks/reading_time.py
 
 # Extra Configuration
 extra_javascript:
@@ -126,7 +81,7 @@ extra_javascript:
   - javascripts/pangu_init.js
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/academic.css
 
 # Markdown Extensions
 markdown_extensions:

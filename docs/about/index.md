@@ -1,10 +1,15 @@
-# 关于
+# About
 
-你好，我是梁梦磊（Menglei Liang）。
+I am a PhD student at the **University at Albany, State University of New York**, and a graduate researcher at the **Atmospheric Sciences Research Center**.
 
-我现在做温室气体遥感反演，主要是甲烷点源的监测和量化。
+My research focuses on the intersection of climate science and machine learning, with interests in methane-emission detection, atmospheric remote-sensing retrieval, and data-driven methods for greenhouse-gas monitoring. Before joining UAlbany, I completed an MS at the University of Chinese Academy of Sciences.
 
-## 联系
+I am a member of the [Atmospheric Modeling and Remote Sensing Lab](https://yu-xue-ying.github.io/group/).
 
+## Contact
+
+- Email: [mliang3@albany.edu](mailto:mliang3@albany.edu)
 - GitHub: [Emeric53](https://github.com/Emeric53)
-- Email: [todayislml@gmail.com](mailto:todayislml@gmail.com)
+- Personal writing: [Nullspace](https://emeric53.github.io/blog/)
+
+For research inquiries or potential collaboration, email is the best way to reach me.

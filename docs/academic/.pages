@@ -1,2 +1,4 @@
-title: 学术
-collapsed: true
+title: Research note
+nav:
+  - index.md
+  - 新型多层匹配滤波算法显著提升甲烷排放监测精度-公众号.md

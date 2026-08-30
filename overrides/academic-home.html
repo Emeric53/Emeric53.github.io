@@ -1,0 +1,109 @@
+{% extends "main.html" %}
+
+{% block header %}{% endblock %}
+{% block tabs %}{% endblock %}
+{% block site_nav %}{% endblock %}
+
+{% block container %}
+  <div class="academic-home">
+    <nav class="academic-nav" aria-label="Primary navigation">
+      <a class="academic-nav__name" href="{{ '.' | url }}">ML<span>/</span></a>
+      <div class="academic-nav__links">
+        <a href="{{ 'research/' | url }}">Research</a>
+        <a href="{{ 'publications/' | url }}">Publications</a>
+        <a href="{{ 'about/' | url }}">About</a>
+        <a href="{{ 'blog/' | url }}">Blog ↗</a>
+      </div>
+    </nav>
+
+    <main class="academic-main">
+      <section class="academic-hero" aria-labelledby="academic-title">
+        <div class="academic-hero__status">
+          <span class="status-dot" aria-hidden="true"></span>
+          PhD Student · University at Albany
+        </div>
+        <div class="academic-hero__title">
+          <p class="academic-eyebrow">Atmospheric science · Remote sensing · Machine learning</p>
+          <h1 id="academic-title">Menglei<br>Liang</h1>
+        </div>
+        <div class="academic-hero__summary">
+          <p>
+            I study greenhouse-gas emissions at the intersection of atmospheric science and machine learning,
+            with a focus on methane remote sensing, point-source quantification, and data-driven methods.
+          </p>
+          <div class="academic-actions">
+            <a class="academic-action academic-action--primary" href="{{ 'research/' | url }}">View research</a>
+            <a class="academic-action" href="mailto:mliang3@albany.edu">Email me</a>
+          </div>
+        </div>
+        <aside class="academic-affiliation">
+          <span>Current affiliation</span>
+          <strong>Atmospheric Sciences Research Center</strong>
+          <p>University at Albany, State University of New York</p>
+        </aside>
+        <div class="academic-coordinate" aria-hidden="true">42.686° N · 73.824° W</div>
+      </section>
+
+      <section class="academic-focus" aria-labelledby="focus-title">
+        <header>
+          <p>01 / Research focus</p>
+          <h2 id="focus-title">From satellite observations<br>to actionable emissions.</h2>
+        </header>
+        <div class="academic-focus__items">
+          <article>
+            <span>01</span>
+            <h3>Methane remote sensing</h3>
+            <p>Retrieving, detecting, and quantifying methane plumes from hyperspectral satellite observations.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Scientific machine learning</h3>
+            <p>Developing data-driven methods that remain connected to observation physics and validation.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Atmospheric transport</h3>
+            <p>Exploring how transport models and satellite data can support greenhouse-gas monitoring across scales.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="academic-selected" aria-labelledby="selected-title">
+        <header>
+          <p>02 / Selected work</p>
+          <h2 id="selected-title">Publications</h2>
+          <a href="{{ 'publications/' | url }}">All publications →</a>
+        </header>
+        <div class="academic-papers">
+          <a href="https://doi.org/10.3390/rs17050843">
+            <span class="academic-paper__year">2025</span>
+            <div>
+              <strong>An Effective Quantification of Methane Point-Source Emissions with the Multi-Level Matched Filter from Hyperspectral Imagery</strong>
+              <p>M. Liang, Y. Zhang, L. Chen, J. Tao, M. Fan, and C. Yu · <em>Remote Sensing</em></p>
+            </div>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://doi.org/10.1109/TGRS.2025.3563599">
+            <span class="academic-paper__year">2025</span>
+            <div>
+              <strong>MPSUNet: A Deep Learning-Based Segmentation Framework for Methane Plume Detection</strong>
+              <p>C. Chen, M. Fan, Z. Wang, M. Liang, J. Tao, and L. Chen · <em>IEEE TGRS</em></p>
+            </div>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="academic-footer">
+      <p>© 2026 Menglei Liang</p>
+      <div>
+        <a href="mailto:mliang3@albany.edu">Email</a>
+        <a href="https://github.com/Emeric53">GitHub</a>
+        <a href="{{ 'blog/' | url }}">Blog</a>
+      </div>
+    </footer>
+  </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}

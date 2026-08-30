@@ -159,9 +159,7 @@ body {
 .academic-home {
   min-height: 100vh;
   color: var(--academic-ink);
-  background:
-    linear-gradient(90deg, transparent calc(50% - .5px), var(--academic-line) 50%, transparent calc(50% + .5px)),
-    var(--academic-bg);
+  background: var(--academic-bg);
 }
 
 .academic-home a {

@@ -6,72 +6,49 @@
 
 {% block container %}
   <div class="academic-home">
-    <nav class="academic-nav" aria-label="Primary navigation">
-      <a class="academic-nav__name" href="{{ '.' | url }}">ML<span>/</span></a>
-      <div class="academic-nav__links">
-        <a href="{{ 'research/' | url }}">Research</a>
-        <a href="{{ 'publications/' | url }}">Publications</a>
-        <a href="{{ 'about/' | url }}">About</a>
-        <a href="{{ 'blog/' | url }}">Blog ↗</a>
-      </div>
-    </nav>
+    {% include "partials/academic-nav.html" %}
 
     <main class="academic-main">
       <section class="academic-hero" aria-labelledby="academic-title">
-        <div class="academic-hero__status">
-          <span class="status-dot" aria-hidden="true"></span>
-          PhD Student · University at Albany
-        </div>
         <div class="academic-hero__title">
-          <p class="academic-eyebrow">Atmospheric science · Remote sensing · Machine learning</p>
-          <h1 id="academic-title">Menglei<br>Liang</h1>
+          <h1 id="academic-title">Menglei Liang</h1>
+          <p class="academic-eyebrow">PhD student in Atmospheric Science · University at Albany</p>
         </div>
         <div class="academic-hero__summary">
           <p>
-            I study greenhouse-gas emissions at the intersection of atmospheric science and machine learning,
-            with a focus on methane remote sensing, point-source quantification, and data-driven methods.
+            I study methane emissions using satellite remote sensing and scientific machine learning.
           </p>
           <div class="academic-actions">
-            <a class="academic-action academic-action--primary" href="{{ 'research/' | url }}">View research</a>
-            <a class="academic-action" href="mailto:mliang3@albany.edu">Email me</a>
+            <a class="academic-action" href="{{ 'research/' | url }}">Research →</a>
+            <a class="academic-action" href="{{ 'publications/' | url }}">Publications →</a>
+            <a class="academic-action" href="mailto:mliang3@albany.edu">Email</a>
           </div>
         </div>
-        <aside class="academic-affiliation">
-          <span>Current affiliation</span>
-          <strong>Atmospheric Sciences Research Center</strong>
-          <p>University at Albany, State University of New York</p>
-        </aside>
-        <div class="academic-coordinate" aria-hidden="true">42.686° N · 73.824° W</div>
       </section>
 
       <section class="academic-focus" aria-labelledby="focus-title">
         <header>
-          <p>01 / Research focus</p>
-          <h2 id="focus-title">From satellite observations<br>to actionable emissions.</h2>
+          <h2 id="focus-title">Research</h2>
         </header>
         <div class="academic-focus__items">
           <article>
-            <span>01</span>
             <h3>Methane remote sensing</h3>
-            <p>Retrieving, detecting, and quantifying methane plumes from hyperspectral satellite observations.</p>
+            <p>Detecting and quantifying methane plumes from hyperspectral satellite observations.</p>
           </article>
           <article>
-            <span>02</span>
             <h3>Scientific machine learning</h3>
-            <p>Developing data-driven methods that remain connected to observation physics and validation.</p>
+            <p>Data-driven methods grounded in observation physics and validation.</p>
           </article>
           <article>
-            <span>03</span>
             <h3>Atmospheric transport</h3>
-            <p>Exploring how transport models and satellite data can support greenhouse-gas monitoring across scales.</p>
+            <p>Connecting satellite observations with atmospheric transport across scales.</p>
           </article>
         </div>
       </section>
 
       <section class="academic-selected" aria-labelledby="selected-title">
         <header>
-          <p>02 / Selected work</p>
-          <h2 id="selected-title">Publications</h2>
+          <h2 id="selected-title">Selected publications</h2>
           <a href="{{ 'publications/' | url }}">All publications →</a>
         </header>
         <div class="academic-papers">
@@ -95,14 +72,7 @@
       </section>
     </main>
 
-    <footer class="academic-footer">
-      <p>© 2026 Menglei Liang</p>
-      <div>
-        <a href="mailto:mliang3@albany.edu">Email</a>
-        <a href="https://github.com/Emeric53">GitHub</a>
-        <a href="{{ 'blog/' | url }}">Blog</a>
-      </div>
-    </footer>
+    {% include "partials/academic-footer.html" %}
   </div>
 {% endblock %}
 

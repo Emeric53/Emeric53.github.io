@@ -13,30 +13,14 @@ copyright: Copyright &copy; 2024 ~ now | 🦩 Menglei Liang
 
 theme:
   name: material
-  language: zh
+  language: en
   custom_dir: overrides
   favicon: assets/images/favicon.svg
   icon:
     logo: material/satellite-variant
     repo: fontawesome/brands/github
   features:
-    - navigation.indexes
-    - navigation.tabs
-    - navigation.sections
-    - toc.follow
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
     - content.code.copy
-    - content.tooltips
-    - navigation.tracking
-    - navigation.footer
-    - navigation.file_type_icons
-    - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.instant.progress
   palette:
     - scheme: default
       toggle:
@@ -57,31 +41,23 @@ extra:
       link: mailto:mliang3@albany.edu
 
 # Plugins
-plugins: 
-  - search:
-      lang:
-        - en
-        - zh
-  - awesome-pages
-  - glightbox
-  - git-revision-date-localized:
-      type: timeago
-      locale: zh
-      enable_creation_date: true
-      enable_git_follow: false
-      fallback_to_build_date: true
+plugins:
   - minify:
       minify_html: true
 
 # Extra Configuration
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js
-  - javascripts/pangu_init.js
-
 extra_css:
   - stylesheets/academic.css
+
+exclude_docs: |
+  academic/
+  stylesheets/index.md
+
+nav:
+  - Home: index.md
+  - Research: research.md
+  - Publications: publications.md
+  - About: about/index.md
 
 # Markdown Extensions
 markdown_extensions:

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include "head.html" %}
+<title>{{ config.site_name }}</title>
+<meta name="description" content="{{ config.site_description }}">
+<link rel="canonical" href="{{ config.site_url }}">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Menglei Liang">
+<meta property="og:description" content="{{ config.site_description }}">
+<meta property="og:url" content="{{ config.site_url }}">
+<meta property="og:image" content="{{ config.site_url }}assets/images/academic-og.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<div class="page">
+  <div class="spine"><h1>Menglei Liang</h1></div>
+  <main class="body">
+    <p class="aff">PhD student, Atmospheric Science, University at Albany, SUNY<br>Atmospheric Sciences Research Center</p>
+    <p class="statement">I study methane emissions using satellite remote sensing and scientific machine learning.</p>
+
+    <section id="research">
+      <h2>Research</h2>
+      <dl>
+        <dt>Methane plume detection and quantification</dt>
+        <dd>Detecting plumes, retrieving concentration enhancements, and estimating point-source emission rates from hyperspectral satellite observations.</dd>
+        <dt>Scientific machine learning</dt>
+        <dd>Data-driven retrieval and plume-segmentation methods that remain interpretable and testable against physical expectations.</dd>
+        <dt>Atmospheric transport and multiscale monitoring</dt>
+        <dd>Connecting satellite observations with transport models, from individual facilities to broader spatial scales.</dd>
+      </dl>
+    </section>
+
+    <section id="publications">
+      <h2>References</h2>
+      {% for p in config.extra.publications %}
+        <article class="ref">
+          <h3><a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a></h3>
+          <p>{% for a in p.authors %}{% if a == config.site_author %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+          <p><em>{{ p.venue }}</em>, {{ p.detail }}.</p>
+          <details>
+            <summary>Cite</summary>
+            <pre>{{ p.bibtex | e }}</pre>
+            <button type="button" data-copy>Copy BibTeX</button>
+          </details>
+        </article>
+      {% endfor %}
+    </section>
+
+    <section id="about">
+      <h2>Background</h2>
+      <p>Before joining UAlbany, I completed an MS at the University of Chinese Academy of Sciences. I am a member of the <a href="https://yu-xue-ying.github.io/group/">Atmospheric Modeling and Remote Sensing Lab</a>.</p>
+    </section>
+
+    <footer>
+      <a href="mailto:mliang3@albany.edu">mliang3@albany.edu</a>
+      {% for l in config.extra.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+    </footer>
+  </main>
+</div>
+<script>
+document.querySelectorAll("[data-copy]").forEach(function (b) {
+  b.addEventListener("click", function () {
+    navigator.clipboard.writeText(b.previousElementSibling.textContent.trim()).then(function () {
+      b.textContent = "Copied";
+      setTimeout(function () { b.textContent = "Copy BibTeX"; }, 1600);
+    });
+  });
+});
+</script>
+</body>
+</html>

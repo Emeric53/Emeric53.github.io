@@ -1,91 +1,65 @@
-# 项目信息
 site_name: Menglei Liang
 site_author: Menglei Liang
-site_description: Menglei Liang — PhD student working on methane remote sensing, scientific machine learning, and greenhouse-gas monitoring.
+site_description: Menglei Liang is a PhD student working on methane remote sensing and scientific machine learning.
 site_url: https://emeric53.github.io/
 
-# 代码仓库信息
-repo_name: Emeric53/Emeric53.github.io
-repo_url: https://github.com/Emeric53/Emeric53.github.io/
-
-# 版权信息
-copyright: Copyright &copy; 2024 ~ now | 🦩 Menglei Liang
-
 theme:
-  name: material
-  language: en
-  custom_dir: overrides
-  favicon: assets/images/favicon.svg
-  icon:
-    logo: material/satellite-variant
-    repo: fontawesome/brands/github
-  features:
-    - content.code.copy
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Dark mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Light mode
-  font: false
+  name: null
+  custom_dir: theme
+  static_templates:
+    - 404.html
+    - sitemap.xml
 
-# Social Links
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Emeric53
-    - icon: fontawesome/solid/envelope
-      link: mailto:mliang3@albany.edu
+exclude_docs: |
+  academic/
 
-# Plugins
+nav:
+  - Home: index.md
+
+not_in_nav: |
+  research.md
+  publications.md
+  about/index.md
+
 plugins:
   - minify:
       minify_html: true
 
-# Extra Configuration
-extra_css:
-  - stylesheets/academic.css
-
-exclude_docs: |
-  academic/
-  stylesheets/index.md
-
-nav:
-  - Home: index.md
-  - Research: research.md
-  - Publications: publications.md
-  - About: about/index.md
-
-# Markdown Extensions
-markdown_extensions:
-  - admonition
-  - attr_list
-  - md_in_html
-  - pymdownx.details
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.keys
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.arithmatex:
-      generic: true
+extra:
+  links:
+    - { label: Google Scholar, url: "https://scholar.google.com/citations?user=q1QxULAAAAAJ&hl=en" }
+    - { label: ORCID, url: "https://orcid.org/0009-0009-0552-1431" }
+    - { label: GitHub, url: "https://github.com/Emeric53" }
+    - { label: Notes, url: "https://emeric53.github.io/blog/" }
+  publications:
+    - title: An Effective Quantification of Methane Point-Source Emissions with the Multi-Level Matched Filter from Hyperspectral Imagery
+      authors: [Menglei Liang, Ying Zhang, Liangfu Chen, Jinhua Tao, Meng Fan, Chao Yu]
+      venue: Remote Sensing
+      detail: "17(5), 843, 2025"
+      doi: 10.3390/rs17050843
+      bibtex: |
+        @article{liang2025multilevel,
+          title   = {An Effective Quantification of Methane Point-Source Emissions with the Multi-Level Matched Filter from Hyperspectral Imagery},
+          author  = {Liang, Menglei and Zhang, Ying and Chen, Liangfu and Tao, Jinhua and Fan, Meng and Yu, Chao},
+          journal = {Remote Sensing},
+          volume  = {17},
+          number  = {5},
+          pages   = {843},
+          year    = {2025},
+          doi     = {10.3390/rs17050843}
+        }
+    - title: "MPSUNet: A Deep Learning-Based Segmentation Framework for Methane Plume Detection With Space-Based Hyperspectral and Multispectral Imagery"
+      authors: [Cheng Chen, Meng Fan, Zhibao Wang, Menglei Liang, Jinhua Tao, Liangfu Chen]
+      venue: IEEE Transactions on Geoscience and Remote Sensing
+      detail: "63, 1–15, 2025"
+      doi: 10.1109/TGRS.2025.3563599
+      bibtex: |
+        @article{chen2025mpsunet,
+          title   = {{MPSUNet}: A Deep Learning-Based Segmentation Framework for Methane Plume Detection With Space-Based Hyperspectral and Multispectral Imagery},
+          author  = {Chen, Cheng and Fan, Meng and Wang, Zhibao and Liang, Menglei and Tao, Jinhua and Chen, Liangfu},
+          journal = {IEEE Transactions on Geoscience and Remote Sensing},
+          volume  = {63},
+          pages   = {1--15},
+          year    = {2025},
+          doi     = {10.1109/TGRS.2025.3563599}
+        }

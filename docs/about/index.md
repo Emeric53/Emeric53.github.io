@@ -16,3 +16,5 @@ I am a member of the [Atmospheric Modeling and Remote Sensing Lab](https://yu-xu
 
 - Email: [mliang3@albany.edu](mailto:mliang3@albany.edu)
 - GitHub: [Emeric53](https://github.com/Emeric53)
+- Google Scholar: [Menglei Liang](https://scholar.google.com/citations?user=q1QxULAAAAAJ&hl=en)
+- ORCID: [0009-0009-0552-1431](https://orcid.org/0009-0009-0552-1431)

@@ -35,7 +35,10 @@ extra:
     - title: An Effective Quantification of Methane Point-Source Emissions with the Multi-Level Matched Filter from Hyperspectral Imagery
       authors: [Menglei Liang, Ying Zhang, Liangfu Chen, Jinhua Tao, Meng Fan, Chao Yu]
       venue: Remote Sensing
-      detail: "17(5), 843, 2025"
+      year: 2025
+      status: published
+      links: []
+      detail: "17(5), 843"
       doi: 10.3390/rs17050843
       bibtex: |
         @article{liang2025multilevel,
@@ -51,7 +54,10 @@ extra:
     - title: "MPSUNet: A Deep Learning-Based Segmentation Framework for Methane Plume Detection With Space-Based Hyperspectral and Multispectral Imagery"
       authors: [Cheng Chen, Meng Fan, Zhibao Wang, Menglei Liang, Jinhua Tao, Liangfu Chen]
       venue: IEEE Transactions on Geoscience and Remote Sensing
-      detail: "63, 1–15, 2025"
+      year: 2025
+      status: published
+      links: []
+      detail: "63, 1–15"
       doi: 10.1109/TGRS.2025.3563599
       bibtex: |
         @article{chen2025mpsunet,

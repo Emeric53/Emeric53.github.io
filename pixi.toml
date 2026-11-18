@@ -10,10 +10,10 @@ platforms = ["linux-64", "osx-arm64", "win-64"]
 python = "3.10.*"
 
 [tasks]
-deploy = "mkdocs gh-deploy --force"
+# Publishing is handled by GitHub Actions on pushes to main.
 # PYTHONDONTWRITEBYTECODE：避免 hook 生成 .pyc 触发 mkdocs serve 的重载循环
 start = { cmd = "mkdocs serve", env = { PYTHONDONTWRITEBYTECODE = "1" } }
-build = "mkdocs build"
+build = "mkdocs build --strict"
 
 [pypi-dependencies]
 mkdocs = ">=1.6.1, <2"

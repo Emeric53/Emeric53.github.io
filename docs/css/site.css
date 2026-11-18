@@ -43,3 +43,16 @@ footer { display: flex; flex-wrap: wrap; gap: 6px 24px; padding-top: 8px; font-s
   .statement { margin-bottom: 40px; }
   footer a, summary { padding-block: 5px; }
 }
+
+.skip-link { position: absolute; left: 16px; top: 12px; padding: 8px 12px; background: var(--paper); z-index: 2; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+.sections { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 32px; font-size: 16px; }
+section { scroll-margin-top: 24px; }
+.publication-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.copy-status { display: block; margin-top: 6px; }
+.research-feature { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.research-feature h3 { margin: 0 0 8px; font-size: 21px; font-weight: 400; }
+.research-feature p { font-size: 17px; }
+figure { margin: 20px 0 0; }
+figure img { display: block; width: 100%; height: auto; background: white; }
+figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.5; }

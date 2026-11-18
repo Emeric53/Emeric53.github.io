@@ -13,9 +13,11 @@
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="page">
   <div class="spine"><h1>Menglei Liang</h1></div>
-  <main class="body">
+  <main class="body" id="main" tabindex="-1">
+    <nav class="sections" aria-label="Page sections"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#about">Background</a></nav>
     <p class="aff">PhD student, Atmospheric Science, University at Albany, SUNY<br>Atmospheric Sciences Research Center</p>
     <p class="statement">I study methane emissions using satellite remote sensing and scientific machine learning.</p>
 
@@ -29,19 +31,32 @@
         <dt>Atmospheric transport and multiscale monitoring</dt>
         <dd>Connecting satellite observations with transport models, from individual facilities to broader spatial scales.</dd>
       </dl>
+      <article class="research-feature" aria-labelledby="mlmf-title">
+        <h3 id="mlmf-title">Multi-Level Matched Filter</h3>
+        <p>Conventional matched-filter retrievals can underestimate high methane enhancements. Our Multi-Level Matched Filter combines a radiance look-up table with piecewise regression to address this limitation, evaluated using simulations and controlled-release observations.</p>
+        <figure>
+          <a href="{{ 'assets/images/mlmf-controlled-release.png' | url }}" aria-label="View full-size methane retrieval comparison">
+            <img src="{{ 'assets/images/mlmf-controlled-release.png' | url }}" alt="Controlled-release methane retrievals: conventional matched filter on the left and Multi-Level Matched Filter on the right, for EnMAP, ZY1F and GF5B from top to bottom." loading="lazy" width="2770" height="3175">
+          </a>
+          <figcaption>Controlled-release observations: conventional matched filter (left) and MLMF (right). Rows show EnMAP, ZY1F and GF5B. Methane enhancements are shown in ppm·m. <a href="https://doi.org/10.3390/rs17050843">Liang et al., 2025</a>. Select the figure to view full size.</figcaption>
+        </figure>
+      </article>
     </section>
 
     <section id="publications">
-      <h2>References</h2>
-      {% for p in config.extra.publications %}
+      <h2>Publications</h2>
+      {% for p in config.extra.publications | sort(attribute="year", reverse=true) %}
         <article class="ref">
           <h3><a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a></h3>
           <p>{% for a in p.authors %}{% if a == config.site_author %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}.</p>
-          <p><em>{{ p.venue }}</em>, {{ p.detail }}.</p>
+          <p><em>{{ p.venue }}</em>, {{ p.detail }}, {{ p.year }}.
+          {% if p.status and p.status != "published" %}<span class="publication-status">{{ p.status }}</span>{% endif %}</p>
+          {% if p.links %}<p class="publication-links">{% for link in p.links %}<a href="{{ link.url | e }}">{{ link.label | e }}</a>{% endfor %}</p>{% endif %}
           <details>
             <summary>Cite</summary>
             <pre>{{ p.bibtex | e }}</pre>
             <button type="button" data-copy>Copy BibTeX</button>
+            <span class="copy-status" role="status" aria-live="polite"></span>
           </details>
         </article>
       {% endfor %}
@@ -58,15 +73,6 @@
     </footer>
   </main>
 </div>
-<script>
-document.querySelectorAll("[data-copy]").forEach(function (b) {
-  b.addEventListener("click", function () {
-    navigator.clipboard.writeText(b.previousElementSibling.textContent.trim()).then(function () {
-      b.textContent = "Copied";
-      setTimeout(function () { b.textContent = "Copy BibTeX"; }, 1600);
-    });
-  });
-});
-</script>
+<script src="{{ 'js/citations.js' | url }}" defer></script>
 </body>
 </html>
